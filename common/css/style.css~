@@ -1,0 +1,470 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic);
+
+
+body {
+/*background-image: url("../images/icon.jpg")/*, url("../images/bg3.jpg")*/;
+background-position: 140px 15px/*, 1200px 170px*/;
+background-repeat: no-repeat/*, no-repeat*/;
+color: #1f1313;
+background-size: auto, 110px 110px;
+overflow-x: hidden;
+position: relative;
+}
+
+
+ 
+a {
+	color: #6b6b3a;
+}
+/*ページ全体*/
+#page {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/*ページヘッダー*/
+@media screen and (min-width: 769px){
+#pageHead {
+	/*background-color: #4fdfff;*/
+	background-image: url("../images/ruke_icon.png"), url("../images/paper5.png");
+	background-position: 135px 20px, 1028px 170px;
+	background-repeat: no-repeat, repeat;
+	margin: auto;
+	padding: 0 140px;
+    margin: 0 -140px 6px;
+    width: 100%;
+	padding-top: 1px;
+	
+}
+#pageHead #sitetitle {
+	font-size: 32px;
+	line-height: 1.2;
+	margin: 5px 90px;
+	/*text-shadow: 1px 1px 1px #1f1313;*/
+	font-family: 'Libre Baskerville', serif;
+	color: #1a0d0d;
+	margin-left: 100px;
+}
+
+/*#pageHead #tweet {
+	padding-bottom: 0;
+	padding-top: 0;
+	margin-right: 100px;
+	float: right;
+}
+
+#pageHead #tweet:after {
+	content :"";
+	clear: both;
+	display: block;
+}*/
+
+	
+
+#pageHead #college {
+	font-size: 18px;
+	margin: 0 92px;
+	margin-top: 20px;
+	color: #1a0d0d;
+	margin-left: 100px;
+}
+
+}
+
+@media screen and (max-width:768px){
+#pageHead {
+	/*background-color: #4fdfff;*/
+	background-image: url("../images/ruke_icon.png"), url("../images/paper5.png");
+	background-position: 15px 20px;
+	background-repeat: no-repeat, repeat;
+	/*padding-left: 140px;*/
+    /*margin: 0 -140px 6px;*/
+	margin: auto;
+    width: 100%;
+	padding-top: 1px;
+	
+}
+
+#pageHead #sitetitle {
+	font-size: 32px;
+	line-height: 1.2;
+	margin: 5px 110px;;
+	/*text-shadow: 1px 1px 1px #1f1313;*/
+	font-family: 'Libre Baskerville', serif;
+	color: #1a0d0d;
+	/*margin-left: 100px;*/
+}
+
+/*#pageHead #tweet {
+	padding-bottom: 0;
+	padding-top: 0;
+	margin-right: 100px;
+	float: right;
+}
+
+#pageHead #tweet:after {
+	content :"";
+	clear: both;
+	display: block;
+}*/
+
+	
+
+#pageHead #college {
+	font-size: 18px;
+	margin: 0 2px;
+	margin-top: 20px;
+	color: #1a0d0d;
+	margin-left: 110px;
+}
+
+}
+	
+
+
+/*グローバルナビ*/
+#pageHead .globalNavi {
+	border: solid #c2c2c2;
+	border-width: 2px 0;
+	padding: 0 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background: #f2f2f2;
+	font-family: "Meiryo UI","Meiryo","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","Osaka",sans-serif;
+}
+
+#pageHead .globalNavi ul li {
+	list-style: none;
+	width:  200px;
+	float: left;
+	border-left: solid 1px #c2c2c2;
+	padding: 0 0;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 16px;
+	font-color: 000000;
+	font-family: 'Libre Baskerville', serif;
+}
+
+#pageHead .globalNavi ul li:first-child {
+	border-left: none;
+}
+
+#pageHead .globalNavi ul li a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	padding: 5px 0;
+}
+
+#pageHead .globalNavi ul li ul li a:hover,
+#pageHead .globalNavi ul li a:hover,
+#pageHead .globalNavi ul li.current a {
+	background-color: #c4c0c0;
+	border: 1px solid #c2c2c2;
+	background-image: linear-gradient(to bottom, #ffffff, #c9c9c9);
+	border: 1px solid #666666;
+}
+
+#pageHead .globalNavi ul ul li.normal a {
+	background-image: none;
+	background: #000000;
+}
+	
+
+
+#pageHead .globalNavi ul {
+	margin: 0;
+	padding: 0;
+}
+
+#pageHead .globalNavi ul:after {
+	content :"";
+	clear: both;
+	display: block;
+}
+
+/*サブメニュー*/
+.globalNavi ul li ul {
+  position: absolute;
+  top: 146px;/*親メニューの高さと同じにする*/
+  width: 150px;
+  z-index: 100;
+  background-image: none;
+}
+
+.globalNavi ul li ul li {
+  visibility: hidden;
+  overflow: hidden;
+  width: 150px;/*サブメニューの幅*/
+  height: 0;
+  background: #1c1c1c;/*サブメニューの背景色*/
+  color: #ffffff;
+  opacity: 0.8;
+  text-align: left;
+  background-image: none;
+}
+
+.globalNavi ul li:hover ul li,
+.globalNavi ul li a:hover ul li {
+  visibility: visible;
+  overflow: visible;
+  height: 32px;/*サブメニューの高さ*/
+  z-index: 0;
+  text-align: left;
+
+}
+
+.globalNavi ul li ul li:hover,
+.globalNavi ul ul li.normal a {
+	background-color: #c4c0c0;
+	border: 1px solid #545454;
+	border: 1px solid #000000;
+	background-image: none;
+}
+
+
+.globalNavi * {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/*メインビジュアル*/
+#pageBody .mainVisual .mainVisualText {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	color: #fff;
+	background-color: rgba(39,205,251,0.3);
+	width: 400px;
+	padding: 13px 25px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#pageBody .mainVisual .mainVisualText h1 {
+	font-size: 20px;
+	line-hight: 1.231;
+	margin: 0;
+}
+
+#pageBody .mainVisual .mainVisualText p {
+	font-size: 15px;
+	line-height: 1.5;
+	margin-top: 2px;
+	margin-bottom: 0;
+}
+										 
+/*ページボディ*/
+#pageBody:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#pageBody #pageBodyMain {
+	width: 710px;
+	float: left;
+}
+
+#pageBody #pageBodySub {
+	width: 260px;
+	float: right;
+	box-sizing: border-box;
+}
+
+#pageBodySub h2 {
+	width: 203px;
+	font-size: 16px;
+	margin-top: 0;
+	padding: 5px;
+	border-bottom: 2px groove #CCCCCC;
+	color: #d10057;
+	font-family: 'Libre Baskerville', serif;
+	margin-bottom: 0;
+}
+
+#pageBodySub .newlist ul {
+	list-style: none;
+	padding: 0;
+}
+
+#pageBodySub .newlist h1 {
+	font-family: 'Libre Baskerville', serif;
+	margin-top: 0;
+	font-size: 19px;
+	color: #000000;
+	opacity: 0.6;
+}
+
+
+#pageBodySub .newlist ul li {
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 10px 5px;
+	color: #000000;
+}
+
+#pageBodySub .newlist ul li time {
+	font-weight: bold;
+	display: block;
+}
+
+#pageBodySub .information {
+	border: 1px solid #cfcfcf;
+	margin-bottom: 15px;
+	padding-left: 2px;
+	background-image: url("../images/paper_texture_02.png");
+}
+
+#pageBodySub .link {
+	padding: 0 56px;
+	padding-top: 20px;
+}
+
+#pageBodySub .link a:hover {
+	opacity: 0.7;
+}
+
+#pageBodySub .newlist p {
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 6px;
+	text-align: center;
+}
+
+#pageBodySub .newlist .map p {
+	font-size: 13px;
+	margin-top: 18px;
+	font-weight: normal;
+	text-align: center;
+	color: #000000;
+}
+
+#pageBodySub .paper {
+	background-image: url("../images/pin.png"), url("../images/pin1.png"), url("../images/pin.png"), url("../images/pin1.png"), url("../images/paper.jpg");
+	border-radius: 8px 8px 8px 8px;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat,repeat;
+	background-size: 25px 30px, 25px 30px, 25px 30px, 25px 30px;
+	background-position: 0px 0px, 234px 0px, 0px 393px, 234px 393px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#pageBodySub .twitter {
+	padding: 0 22px;
+	padding-bottom: 33px;
+	padding-top: 0;
+}
+
+#pageBody .mainVisual ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*#pageBody .articlefoot:after {
+	content: "";
+	clear: both;
+	display: block;
+}*/
+
+
+/*#pageBody .articlefoot {
+	width: 670px;
+}*/
+
+
+/*メインサブ*/
+#pageBody .sub {
+	margin-top: 50px;
+}
+
+#pageBody .sub:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+
+#pageBody .sub article {
+	width: 335px;
+	float: left;
+	margin-left: 30px;
+}
+
+#pageBody .sub article:first-child {
+	margin-left: 0;
+}
+
+#pageBody .sub article h2 {
+	font-size: 18px;
+	margin: 5px 0;
+}
+
+#pageBody .sub article p {
+	margin-top: 0;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+#pageBody .sub article img {
+    padding:5px;/* 余白 */   
+    background-color:#ffffff;/* 余白部分の色 */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 8px;
+}
+
+/*記事フッター*/
+#pageBody .articlefoot {
+	border-top: solid 2px #cccccc;
+
+	margin-top: 30px;
+}
+
+#pageBody .articlefoot h1 {
+	font-size: 22px;
+	margin-top: 10px;
+	margin-bottom: 4px;
+}
+
+#pageBody .articlefoot p {
+	margin-top: 3px;
+}
+
+#pageBody .articlefoot .tweet {
+	margin-top: 50px;
+}
+
+
+/*ページフッター*/
+#pageFoot {
+	border-top: solid 2px #cccccc;
+	margin-top: 30px;
+	width: 1000px;
+	vertical-align: middle;
+    text-align: center;
+}
+
+
+#copyright small {
+	font-size: 12px;
+	line-height: 1.5;
+	color: #ccc;
+	background-color: #333;
+	width: 1000px;
+	padding: 7px 329px;
+}
+
+
+
+
+
+
+
+
+
